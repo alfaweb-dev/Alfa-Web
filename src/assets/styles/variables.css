@@ -1,0 +1,22 @@
+:root {
+  /* Brand core */
+  --color-primary: #111a63;       /* deep indigo navy — Alfa Web brand */
+  --color-primary-light: #263189;
+  --color-primary-dark: #0a1140;
+  --color-sand: #d2c2b2;          /* warm sand — Alfa Web brand */
+  --color-sand-light: #ece2d8;
+  --color-cream: #f6f1ea;
+  --color-copper: #a9835b;        /* accent derived from sand, for CTAs on dark */
+  --color-ink: #0e1230;
+  --color-white: #ffffff;
+  --color-line: rgba(17, 26, 99, 0.12);
+  --color-line-on-dark: rgba(210, 194, 178, 0.22);
+
+  /* Type */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+  --font-arabic: "Tajawal", "Inter", sans-serif;
+
+  /* Motion */
+  --ease-signature: cubic-bezier(0.16, 1, 0.3, 1);
+}
