@@ -7,7 +7,7 @@ import { projectsData } from "../../data/projectsData";
 
 export default function PortfolioPreview() {
   const { t, lang } = useLanguage();
-  const projects = projectsData[lang];
+  const projects = [...projectsData[lang]].sort((a, b) => Number(b.year) - Number(a.year)).slice(0, 3);
 
   return (
     <section className="py-20 md:py-28">

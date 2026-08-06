@@ -5,7 +5,7 @@ export const SOCIAL_LINKS = {
   tiktok: "https://tiktok.com/@alfaweb.dz",
 };
 
-export const WHATSAPP_NUMBER = "213660271157"; // format: country code + number, no +
+export const WHATSAPP_NUMBER = "213000000000"; // format: country code + number, no +
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export const CONTACT_EMAIL = "hello.alfaweb@gmail.com";

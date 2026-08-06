@@ -24,6 +24,19 @@ export function InstagramIcon({ size = 18, className = "" }) {
   );
 }
 
+export function GithubIcon({ size = 18, className = "" }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
+      <path
+        d="M12 2.5c-5.5 0-9.5 4.2-9.5 9.4 0 4.2 2.6 7.7 6.2 8.9.45.1.62-.2.62-.44v-1.7c-2.53.56-3.06-1.13-3.06-1.13-.42-1.06-1.02-1.34-1.02-1.34-.83-.58.06-.57.06-.57.92.07 1.4.96 1.4.96.82 1.4 2.14 1 2.66.76.08-.6.32-1 .58-1.23-2.02-.23-4.15-1.03-4.15-4.58 0-1.01.35-1.84.93-2.49-.1-.23-.4-1.17.09-2.43 0 0 .76-.25 2.5.95a8.4 8.4 0 0 1 4.55 0c1.73-1.2 2.5-.95 2.5-.95.5 1.26.19 2.2.09 2.43.58.65.93 1.48.93 2.49 0 3.56-2.14 4.34-4.18 4.57.33.29.62.87.62 1.75v2.6c0 .24.16.55.63.44 3.6-1.22 6.2-4.7 6.2-8.9C21.5 6.7 17.5 2.5 12 2.5Z"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function TikTokIcon({ size = 18, className = "" }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
