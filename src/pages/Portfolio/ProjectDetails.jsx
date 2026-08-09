@@ -1,11 +1,10 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight, CheckCircle2, Sparkles, ShieldCheck } from "lucide-react";
-import { GithubIcon } from "../../components/ui/SocialIcons";
 import Container from "../../components/common/Container";
 import ProjectThumb from "../../components/portfolio/ProjectThumb";
 import Button from "../../components/common/Button";
 import { useLanguage } from "../../hooks/useLanguage";
-import { projectsData } from "../../data/projectsData";
+import { projectsData } from "../../data/projects";
 
 export default function ProjectDetails() {
   const { id } = useParams();
@@ -48,7 +47,7 @@ export default function ProjectDetails() {
               </span>
             </div>
             <h1 className="font-display text-3xl md:text-5xl text-sand-light leading-tight">{project.name}</h1>
-            <p className="text-base text-sand-light/65 leading-relaxed">{project.subtitle}</p>
+            <p className="text-base text-sand-light/65 leading-relaxed">{project.shortDescription || project.subtitle}</p>
 
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
@@ -80,12 +79,6 @@ export default function ProjectDetails() {
                   {t("portfolio.coming_soon")}
                 </span>
               )}
-              {project.githubUrl && (
-                <Button href={project.githubUrl} variant="outline">
-                  <GithubIcon size={16} />
-                  {t("portfolio.source_code")}
-                </Button>
-              )}
             </div>
           </div>
         </div>
@@ -113,6 +106,24 @@ export default function ProjectDetails() {
           <p className="text-sm leading-relaxed text-sand-light/65 max-w-3xl">{project.context}</p>
         </div>
 
+        {/* Vision & objective */}
+        {(project.vision || project.objective) && (
+          <div className="grid gap-6 md:grid-cols-2">
+            {project.vision && (
+              <div className="rounded-2xl border border-sand/10 bg-panel/30 p-8">
+                <h3 className="font-display text-lg text-sand-light mb-3">{t("portfolio.vision_title")}</h3>
+                <p className="text-sm leading-relaxed text-sand-light/65">{project.vision}</p>
+              </div>
+            )}
+            {project.objective && (
+              <div className="rounded-2xl border border-sand/10 bg-panel/30 p-8">
+                <h3 className="font-display text-lg text-sand-light mb-3">{t("portfolio.objective_title")}</h3>
+                <p className="text-sm leading-relaxed text-sand-light/65">{project.objective}</p>
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Problem / Solution — the case for why this project matters */}
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-2xl border border-sand/10 bg-panel/40 p-8">
@@ -124,6 +135,20 @@ export default function ProjectDetails() {
             <p className="text-sm leading-relaxed text-primary-dark/80">{project.solution}</p>
           </div>
         </div>
+
+        {/* Who it's for — helps a prospect see themselves in the case study */}
+        {project.targetAudience && project.targetAudience.length > 0 && (
+          <div className="flex flex-col gap-5">
+            <h2 className="font-display text-2xl text-sand-light">{t("portfolio.audience_title")}</h2>
+            <div className="flex flex-wrap gap-2">
+              {project.targetAudience.map((audience) => (
+                <span key={audience} className="rounded-full border border-sand/20 px-4 py-2 text-sm text-sand">
+                  {audience}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Technical challenges — demonstrates real capability to prospects */}
         <div className="flex flex-col gap-6">
@@ -138,6 +163,21 @@ export default function ProjectDetails() {
           </div>
         </div>
 
+        {/* Main sections — shows the platform's real scope/complexity */}
+        {project.mainSections && project.mainSections.length > 0 && (
+          <div className="flex flex-col gap-6">
+            <h2 className="font-display text-2xl text-sand-light">{t("portfolio.sections_title")}</h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {project.mainSections.map((section) => (
+                <div key={section.title} className="rounded-xl border border-sand/10 bg-panel/30 p-5">
+                  <h3 className="font-display text-base text-sand-light mb-1.5">{section.title}</h3>
+                  <p className="text-sm text-sand-light/60 leading-relaxed">{section.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Features */}
         <div className="flex flex-col gap-6">
           <h2 className="font-display text-2xl text-sand-light">{t("portfolio.features_title")}</h2>
@@ -151,6 +191,14 @@ export default function ProjectDetails() {
           </div>
         </div>
 
+        {/* Technical approach */}
+        {project.technicalApproach && (
+          <div className="rounded-2xl border border-sand/10 bg-panel/30 p-8">
+            <h2 className="font-display text-xl text-sand-light mb-3">{t("portfolio.tech_approach_title")}</h2>
+            <p className="text-sm leading-relaxed text-sand-light/65 max-w-3xl">{project.technicalApproach}</p>
+          </div>
+        )}
+
         {/* Results */}
         <div className="flex flex-col gap-6">
           <h2 className="font-display text-2xl text-sand-light">{t("portfolio.results_title")}</h2>
@@ -163,6 +211,38 @@ export default function ProjectDetails() {
             ))}
           </div>
         </div>
+
+        {/* Growth potential & roadmap — forward-looking, shows scalability thinking */}
+        {(project.growthPotential || (project.roadmap && project.roadmap.length > 0)) && (
+          <div className="grid gap-6 md:grid-cols-2">
+            {project.growthPotential && (
+              <div className="rounded-2xl border border-sand/10 bg-panel/40 p-8">
+                <h2 className="font-display text-xl text-sand-light mb-3">{t("portfolio.growth_title")}</h2>
+                <p className="text-sm leading-relaxed text-sand-light/65">{project.growthPotential}</p>
+              </div>
+            )}
+            {project.roadmap && project.roadmap.length > 0 && (
+              <div className="rounded-2xl border border-sand/10 bg-panel/40 p-8">
+                <h2 className="font-display text-xl text-sand-light mb-3">{t("portfolio.roadmap_title")}</h2>
+                <ul className="flex flex-col gap-2">
+                  {project.roadmap.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-sand-light/65">
+                      <span className="mt-2 h-1 w-1 rounded-full bg-sand/60 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Project impact — closing statement, sets up the final CTA */}
+        {project.projectImpact && (
+          <p className="text-center font-display text-lg md:text-xl text-sand-light/80 italic max-w-3xl mx-auto leading-relaxed">
+            "{project.projectImpact}"
+          </p>
+        )}
 
         {/* Closing CTA — turn a good case study into a lead */}
         <div className="grain-overlay relative overflow-hidden rounded-2xl bg-panel border border-sand/10 px-8 py-12 text-center flex flex-col items-center gap-4">

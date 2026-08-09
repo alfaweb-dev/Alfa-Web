@@ -3,10 +3,6 @@
 // inside a neutral badge so any logo colour stays legible. Falls back to an
 // initial letter only if neither is available.
 export default function ProjectThumb({ image, logo, name, index = 0 }) {
-  if (image) {
-    return <img src={image} alt={name} className="h-full w-full object-cover" />;
-  }
-
   const variants = [
     "from-primary-light via-primary to-primary-dark",
     "from-[#2a2452] via-primary to-primary-dark",
@@ -16,6 +12,21 @@ export default function ProjectThumb({ image, logo, name, index = 0 }) {
     "from-[#141a52] via-primary to-[#050714]",
   ];
   const gradient = variants[index % variants.length];
+
+  if (image) {
+    // Contained (not cropped) so the full screenshot stays readable —
+    // screenshots are usually wider than the 4:3 card, so we letterbox
+    // them on the same brand gradient instead of cutting off content.
+    return (
+      <div className={`flex h-full w-full items-center justify-center bg-gradient-to-br ${gradient} p-4 md:p-6`}>
+        <img
+          src={image}
+          alt={name}
+          className="max-h-full max-w-full rounded-lg object-contain shadow-lg shadow-primary-dark/40"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className={`relative flex h-full w-full items-center justify-center bg-gradient-to-br ${gradient}`}>

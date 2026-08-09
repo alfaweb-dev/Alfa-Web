@@ -2,7 +2,7 @@ import Container from "../../components/common/Container";
 import SectionHeading from "../../components/common/SectionHeading";
 import ProjectCard from "../../components/portfolio/ProjectCard";
 import { useLanguage } from "../../hooks/useLanguage";
-import { projectsData } from "../../data/projectsData";
+import { projectsData } from "../../data/projects";
 
 export default function Portfolio() {
   const { t, lang } = useLanguage();

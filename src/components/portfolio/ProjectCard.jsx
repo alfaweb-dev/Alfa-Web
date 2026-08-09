@@ -11,7 +11,7 @@ export default function ProjectCard({ project, index = 0 }) {
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-sand/10 bg-panel/40 transition-all duration-300 hover:border-sand/30 hover:-translate-y-1">
       <Link to={detailsPath} className="relative aspect-[4/3] overflow-hidden block">
         <div className="h-full w-full transition-transform duration-700 group-hover:scale-105">
-          <ProjectThumb image={project.image} logo={project.logo} name={project.name} index={index} />
+          <ProjectThumb logo={project.logo} name={project.name} index={index} />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/90 via-primary-dark/10 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 p-5">

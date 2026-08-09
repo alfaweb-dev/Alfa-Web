@@ -3,7 +3,7 @@ import SectionHeading from "../../components/common/SectionHeading";
 import ProjectCard from "../../components/portfolio/ProjectCard";
 import Button from "../../components/common/Button";
 import { useLanguage } from "../../hooks/useLanguage";
-import { projectsData } from "../../data/projectsData";
+import { projectsData } from "../../data/projects";
 
 export default function PortfolioPreview() {
   const { t, lang } = useLanguage();
