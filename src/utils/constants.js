@@ -1,8 +1,8 @@
 // Replace these placeholders with Alfa Web's real handles / number.
 export const SOCIAL_LINKS = {
-  facebook: "https://facebook.com/alfaweb.dz",
-  instagram: "https://instagram.com/alfaweb.dz",
-  tiktok: "https://tiktok.com/@alfaweb.dz",
+  facebook: "https://www.facebook.com/profile.php?id=61590126553791",
+  instagram: "https://www.instagram.com/alfawebdev/",
+  tiktok: "https://www.tiktok.com/@alfawebdev",
 };
 
 export const WHATSAPP_NUMBER = "213660271157"; // format: country code + number, no +

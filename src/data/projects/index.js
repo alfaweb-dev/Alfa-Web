@@ -8,10 +8,11 @@ import { mehneti } from "./mehneti";
 import { fitora } from "./fitora";
 import { dzayer3abrzaman } from "./dzayer3abrzaman";
 import { unihubdz } from "./unihubdz";
+import { leora } from "./leora";
 
-export { sqlMiroir, mehneti, fitora, dzayer3abrzaman, unihubdz };
+export { sqlMiroir, mehneti, fitora, dzayer3abrzaman, unihubdz, leora };
 
-export const allProjects = [sqlMiroir, mehneti, fitora, dzayer3abrzaman, unihubdz];
+export const allProjects = [sqlMiroir, mehneti, fitora, dzayer3abrzaman, unihubdz, leora];
 
 const LANGS = ["fr", "en", "ar"];
 

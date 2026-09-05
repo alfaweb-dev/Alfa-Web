@@ -70,6 +70,17 @@ const base = [
     logo: "/projects/unihubdz.png",
     gallery: [],
   },
+  {
+    id: "leora",
+    year: "2026",
+    duration: { fr: "1 mois", en: "1 month", ar: "شهر واحد" },
+    technologies: ["React", "Tailwind CSS", "React Router", "Vite"],
+    link: "",
+    githubUrl: "",
+    image: null,
+    logo: "/projects/leora.png",
+    gallery: [],
+  },
 ];
 
 const byId = Object.fromEntries(base.map((p) => [p.id, p]));
@@ -255,6 +266,42 @@ export const projectsData = {
         "Architecture prête pour l'intégration backend",
       ],
     },
+    {
+      ...byId["leora"],
+      name: "LÉORA",
+      category: "Boutique e-commerce de chaussures",
+      subtitle: "Une expérience digitale élégante pour une boutique de chaussures féminines",
+      context:
+        "LÉORA est une boutique digitale pensée pour une marque de chaussures féminines souhaitant présenter ses collections dans une expérience moderne, élégante et immersive. Le projet transforme une simple présence sur les réseaux sociaux en une véritable expérience e-commerce.",
+      problem:
+        "De nombreuses boutiques de chaussures vendent principalement via Instagram et Facebook, ce qui rend la présentation des produits, la recherche d'informations et le passage de commande moins structurés. Les clientes doivent souvent parcourir plusieurs publications ou contacter directement la boutique pour obtenir les détails d'un produit.",
+      solution:
+        "LÉORA propose une boutique en ligne moderne permettant de découvrir les collections, consulter les détails des chaussures, choisir les variantes disponibles et accéder rapidement aux informations nécessaires avant l'achat, dans une interface pensée autour de l'élégance de la marque.",
+      challenges: [
+        "Créer une identité digitale élégante adaptée à une boutique féminine",
+        "Mettre en valeur les chaussures à travers une présentation visuelle immersive",
+        "Construire une navigation simple et intuitive pour parcourir les collections",
+        "Créer une expérience responsive adaptée au mobile et aux réseaux sociaux",
+        "Structurer les produits, catégories, tailles, couleurs et prix de manière claire",
+      ],
+      features: [
+        "Homepage immersive avec mise en avant des collections",
+        "Catalogue de chaussures avec catégories",
+        "Fiches produits détaillées",
+        "Gestion des tailles, couleurs et prix",
+        "Présentation des produits avec images haute qualité",
+        "Interface responsive mobile, tablette et desktop",
+        "Navigation fluide et expérience utilisateur moderne",
+        "Design adapté à l'identité visuelle de LÉORA",
+      ],
+      results: [
+        "Création d'une identité digitale élégante pour LÉORA",
+        "Transformation d'une boutique présente sur les réseaux sociaux en expérience web professionnelle",
+        "Présentation plus claire et attractive des collections",
+        "Expérience responsive pensée en priorité pour les utilisatrices mobiles",
+        "Base évolutive pouvant accueillir de futures fonctionnalités e-commerce",
+    ],
+  },
   ],
 
   en: [
@@ -437,6 +484,42 @@ export const projectsData = {
         "Architecture ready for backend integration",
       ],
     },
+    {
+      ...byId["leora"],
+      name: "LÉORA",
+      category: "Footwear E-commerce Store",
+      subtitle: "An elegant digital experience designed for a women's footwear brand",
+      context:
+        "LÉORA is a digital storefront designed for a women's footwear brand looking to present its collections through a modern, elegant and immersive experience. The project transforms a social-media-based presence into a professional web experience.",
+      problem:
+        "Many footwear boutiques mainly sell through Instagram and Facebook, making product discovery, information access and ordering less structured. Customers often have to browse multiple posts or contact the store directly to get product details.",
+      solution:
+        "LÉORA provides a modern online storefront where customers can discover collections, explore detailed product pages, check available variants and quickly access the information they need before purchasing, all within an elegant brand-focused interface.",
+      challenges: [
+        "Creating an elegant digital identity for a women's footwear brand",
+        "Showcasing footwear through an immersive visual experience",
+        "Building simple and intuitive collection navigation",
+        "Creating a responsive experience optimized for mobile users",
+        "Structuring products, categories, sizes, colors and prices clearly",
+      ],
+      features: [
+        "Immersive homepage showcasing collections",
+        "Footwear catalog with categories",
+        "Detailed product pages",
+        "Size, color and price information",
+        "High-quality product presentation",
+        "Responsive mobile, tablet and desktop experience",
+        "Smooth navigation and modern user experience",
+        "Design aligned with LÉORA's visual identity",
+      ],
+      results: [
+        "Created an elegant digital identity for LÉORA",
+        "Transformed a social-media-based boutique into a professional web experience",
+        "Improved product and collection presentation",
+        "Designed a mobile-first experience for customers",
+        "Created a scalable foundation for future e-commerce features",
+      ],
+    },
   ],
 
   ar: [
@@ -617,6 +700,42 @@ export const projectsData = {
         "منصة طلابية متكاملة تم تسليمها",
         "واجهة عصرية ومتجاوبة",
         "بنية جاهزة للربط بخادم خلفي",
+      ],
+    },
+    {
+      ...byId["leora"],
+      name: "LÉORA",
+      category: "متجر إلكتروني للأحذية",
+      subtitle: "تجربة رقمية أنيقة مصممة لعلامة متخصصة في الأحذية النسائية",
+      context:
+        "LÉORA هو متجر رقمي صُمم لعلامة متخصصة في الأحذية النسائية، بهدف تقديم مجموعاتها من خلال تجربة عصرية وأنيقة وجذابة. يحوّل المشروع الحضور على مواقع التواصل الاجتماعي إلى تجربة ويب احترافية.",
+      problem:
+        "تعتمد العديد من متاجر الأحذية على Instagram وFacebook لعرض منتجاتها، مما يجعل اكتشاف المنتجات والحصول على المعلومات وإتمام الطلب أقل تنظيمًا. غالبًا ما تضطر العميلة إلى البحث بين المنشورات أو التواصل مباشرة مع المتجر لمعرفة تفاصيل المنتج.",
+      solution:
+        "يوفر LÉORA متجرًا إلكترونيًا عصريًا يسمح للعميلات باكتشاف المجموعات، استعراض تفاصيل الأحذية، معرفة المقاسات والألوان المتوفرة والوصول بسهولة إلى المعلومات اللازمة قبل الشراء، ضمن واجهة تعكس هوية العلامة.",
+      challenges: [
+        "إنشاء هوية رقمية أنيقة تناسب علامة متخصصة في الأحذية النسائية",
+        "إبراز الأحذية من خلال تجربة بصرية جذابة",
+        "إنشاء تنقل بسيط وسهل بين مختلف المجموعات",
+        "تصميم تجربة متجاوبة ومناسبة خصوصًا لمستخدمي الهاتف",
+        "تنظيم المنتجات والتصنيفات والمقاسات والألوان والأسعار بشكل واضح",
+      ],
+      features: [
+        "صفحة رئيسية جذابة لعرض المجموعات",
+        "كتالوج للأحذية مع التصنيفات",
+        "صفحات تفصيلية للمنتجات",
+        "عرض المقاسات والألوان والأسعار",
+        "عرض المنتجات بجودة عالية",
+        "تصميم متجاوب للهاتف واللوحي والحاسوب",
+        "تنقل سلس وتجربة مستخدم عصرية",
+        "تصميم متناسق مع الهوية البصرية لـ LÉORA",
+      ],
+      results: [
+        "إنشاء هوية رقمية أنيقة لعلامة LÉORA",
+        "تحويل حضور المتجر على مواقع التواصل إلى تجربة ويب احترافية",
+        "تقديم المجموعات والمنتجات بطريقة أوضح وأكثر جاذبية",
+        "تصميم تجربة موجهة بشكل أساسي لمستخدمي الهاتف",
+        "إنشاء قاعدة قابلة للتطوير وإضافة خصائص تجارة إلكترونية مستقبلية",
       ],
     },
   ],
