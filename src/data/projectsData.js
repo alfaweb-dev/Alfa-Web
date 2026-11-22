@@ -5,6 +5,25 @@
 // projects not deployed publicly and the UI will show a "coming soon" state.
 const base = [
   {
+    id: "boutique-kenza",
+    year: "2026",
+    duration: { fr: "1 mois", en: "1 month", ar: "شهر واحد" },
+    technologies: [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT"
+    ],
+    link: null,
+    githubUrl: "",
+    image: null,
+    logo: "/projects/boutique-kenza.png",
+    gallery: [],
+  },
+  {
     id: "sql-miroir",
     year: "2025",
     duration: { fr: "2 mois", en: "2 months", ar: "شهران" },
@@ -87,6 +106,52 @@ const byId = Object.fromEntries(base.map((p) => [p.id, p]));
 
 export const projectsData = {
   fr: [
+    {
+      ...byId["boutique-kenza"],
+      name: "Boutique Kenza",
+      category: "E-commerce",
+      subtitle: "Une boutique en ligne complète avec un espace d'administration dédié",
+      context:
+        "Boutique Kenza est une plateforme e-commerce développée pour une boutique souhaitant digitaliser son activité et offrir à ses clientes une expérience d'achat simple, moderne et accessible. Le projet comprend une boutique en ligne ainsi qu'un espace d'administration permettant de gérer les produits et les commandes.",
+      problem:
+        "La gestion d'une boutique via les réseaux sociaux peut rapidement devenir complexe : présentation des produits dispersée, suivi manuel des commandes et difficulté à organiser les informations relatives aux clientes et aux livraisons.",
+      solution:
+        "Boutique Kenza propose une expérience e-commerce complète avec un catalogue de produits, des fiches détaillées, un panier et un système de commande. Un espace d'administration sécurisé permet à la propriétaire de gérer les produits et de suivre les commandes depuis une interface centralisée.",
+      challenges: [
+        "Développer une architecture Full Stack reliant le frontend, le backend et la base de données",
+        "Mettre en place un système sécurisé d'authentification pour l'administration",
+        "Créer un système de gestion des produits et des commandes",
+        "Concevoir une expérience d'achat fluide et intuitive",
+        "Adapter l'interface aux différents appareils, notamment les smartphones"
+      ],
+      features: [
+        "Catalogue de produits avec présentation détaillée",
+        "Pages individuelles pour chaque produit",
+        "Panier d'achat",
+        "Passage et enregistrement des commandes",
+        "Collecte des informations client et livraison",
+        "Espace d'administration sécurisé",
+        "Gestion des produits depuis le dashboard",
+        "Gestion et suivi des commandes",
+        "Interface responsive adaptée au mobile, tablette et desktop"
+      ],
+      technicalApproach:
+        "Le frontend est développé avec React et Vite. Le backend repose sur Node.js et Express.js, avec MongoDB et Mongoose pour la gestion des données. L'authentification de l'espace d'administration est sécurisée à l'aide de JWT.",
+      results: [
+        "Création d'une boutique e-commerce Full Stack fonctionnelle",
+        "Centralisation de la gestion des produits et des commandes",
+        "Mise en place d'un espace d'administration dédié à la propriétaire",
+        "Expérience d'achat structurée et adaptée aux clientes",
+        "Architecture évolutive pouvant accueillir de nouvelles fonctionnalités"
+      ],
+      growthPotential: [
+        "Notifications automatiques lors de nouvelles commandes",
+        "Suivi des commandes pour les clientes",
+        "Statistiques de vente et analyse des performances",
+        "Gestion avancée du stock",
+        "Intégration de moyens de paiement en ligne"
+      ],
+    },
     {
       ...byId["sql-miroir"],
       name: "SQL Miroir",
@@ -306,6 +371,52 @@ export const projectsData = {
 
   en: [
     {
+      ...byId["boutique-kenza"],
+      name: "Boutique Kenza",
+      category: "E-commerce",
+      subtitle: "A complete online store with a dedicated administration dashboard",
+      context:
+        "Boutique Kenza is a full-stack e-commerce platform developed for a retail business looking to digitize its operations and provide customers with a simple, modern and accessible shopping experience. The project includes an online store and an administration dashboard for managing products and orders.",
+      problem:
+        "Managing a boutique through social media can quickly become complicated: scattered product information, manual order tracking and difficulties organizing customer and delivery details.",
+      solution:
+        "Boutique Kenza provides a complete e-commerce experience with a product catalog, detailed product pages, a shopping cart and an order placement system. A secure administration dashboard allows the store owner to manage products and track orders through a centralized interface.",
+      challenges: [
+        "Building a Full Stack architecture connecting the frontend, backend and database",
+        "Implementing secure authentication for the administration dashboard",
+        "Developing product and order management systems",
+        "Creating a smooth and intuitive shopping experience",
+        "Making the interface responsive across different devices, especially smartphones"
+      ],
+      features: [
+        "Product catalog with detailed product information",
+        "Individual product pages",
+        "Shopping cart",
+        "Order placement and storage",
+        "Customer and delivery information collection",
+        "Secure administration dashboard",
+        "Product management",
+        "Order management and tracking",
+        "Responsive design for mobile, tablet and desktop"
+      ],
+      technicalApproach:
+        "The frontend is built with React and Vite. The backend uses Node.js and Express.js, with MongoDB and Mongoose for data management. Administration authentication is secured using JWT.",
+      results: [
+        "A functional Full Stack e-commerce platform",
+        "Centralized product and order management",
+        "A dedicated administration dashboard for the store owner",
+        "A structured shopping experience for customers",
+        "An extensible architecture ready for future features"
+      ],
+      growthPotential: [
+        "Automatic notifications for new orders",
+        "Customer order tracking",
+        "Sales statistics and performance analytics",
+        "Advanced inventory management",
+        "Online payment integration"
+      ],
+    },
+    {
       ...byId["sql-miroir"],
       name: "SQL Miroir",
       category: "Database simulator",
@@ -523,6 +634,52 @@ export const projectsData = {
   ],
 
   ar: [
+    {
+      ...byId["boutique-kenza"],
+      name: "Boutique Kenza",
+      category: "متجر إلكتروني",
+      subtitle: "متجر إلكتروني متكامل مع لوحة إدارة خاصة",
+      context:
+        "Boutique Kenza هي منصة تجارة إلكترونية تم تطويرها لمتجر يرغب في رقمنة نشاطه وتوفير تجربة تسوق بسيطة وعصرية لزبائنه. يتضمن المشروع متجرًا إلكترونيًا وفضاء إدارة يسمح لصاحبة المتجر بإدارة المنتجات والطلبات.",
+      problem:
+        "إدارة متجر عبر مواقع التواصل الاجتماعي قد تصبح معقدة مع مرور الوقت، بسبب تشتت معلومات المنتجات، والمتابعة اليدوية للطلبات، وصعوبة تنظيم معلومات الزبائن والتوصيل.",
+      solution:
+        "توفر Boutique Kenza تجربة تسوق متكاملة تتضمن كتالوج المنتجات، صفحات تفصيلية، سلة التسوق ونظام تقديم الطلبات. كما تحتوي على فضاء إدارة آمن يسمح لصاحبة المتجر بإدارة المنتجات ومتابعة الطلبات من واجهة واحدة.",
+      challenges: [
+        "تطوير بنية Full Stack تربط الواجهة الأمامية والخلفية وقاعدة البيانات",
+        "تطبيق نظام تسجيل دخول آمن لفضاء الإدارة",
+        "إنشاء نظام لإدارة المنتجات والطلبات",
+        "تصميم تجربة تسوق سهلة وسلسة",
+        "تكييف الواجهة مع مختلف الأجهزة، خاصة الهواتف"
+      ],
+      features: [
+        "كتالوج المنتجات مع تفاصيل كل منتج",
+        "صفحات خاصة بكل منتج",
+        "سلة التسوق",
+        "إرسال وتسجيل الطلبات",
+        "جمع معلومات الزبون والتوصيل",
+        "فضاء إدارة آمن",
+        "إدارة المنتجات من لوحة التحكم",
+        "إدارة ومتابعة الطلبات",
+        "واجهة متجاوبة مع الهاتف واللوحي والحاسوب"
+      ],
+      technicalApproach:
+        "تم تطوير الواجهة الأمامية باستخدام React وVite. يعتمد الخادم الخلفي على Node.js وExpress.js، مع MongoDB وMongoose لإدارة البيانات. تم تأمين تسجيل الدخول إلى فضاء الإدارة باستخدام JWT.",
+      results: [
+        "إنشاء متجر إلكتروني متكامل يعمل بنظام Full Stack",
+        "تجميع إدارة المنتجات والطلبات في مكان واحد",
+        "توفير لوحة إدارة خاصة بصاحبة المتجر",
+        "تقديم تجربة تسوق منظمة وسهلة للزبائن",
+        "بنية قابلة للتطوير وإضافة خصائص جديدة مستقبلًا"
+      ],
+      growthPotential: [
+        "إشعارات تلقائية عند وصول طلبات جديدة",
+        "إمكانية متابعة الطلبات من طرف الزبائن",
+        "إحصائيات المبيعات وتحليل الأداء",
+        "إدارة متقدمة للمخزون",
+        "إضافة الدفع الإلكتروني"
+      ],
+    },
     {
       ...byId["sql-miroir"],
       name: "SQL Miroir",

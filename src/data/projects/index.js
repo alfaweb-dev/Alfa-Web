@@ -9,10 +9,11 @@ import { fitora } from "./fitora";
 import { dzayer3abrzaman } from "./dzayer3abrzaman";
 import { unihubdz } from "./unihubdz";
 import { leora } from "./leora";
+import { boutiqueKenza } from "./boutiqueKenza";
 
-export { sqlMiroir, mehneti, fitora, dzayer3abrzaman, unihubdz, leora };
+export {  boutiqueKenza, leora, sqlMiroir, mehneti, fitora, dzayer3abrzaman, unihubdz };
 
-export const allProjects = [sqlMiroir, mehneti, fitora, dzayer3abrzaman, unihubdz, leora];
+export const allProjects = [sqlMiroir, mehneti, fitora, dzayer3abrzaman, unihubdz, leora, boutiqueKenza];
 
 const LANGS = ["fr", "en", "ar"];
 
